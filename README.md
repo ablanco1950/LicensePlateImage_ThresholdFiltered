@@ -83,7 +83,7 @@ https://aicha-fatrah.medium.com/improve-the-quality-of-your-ocr-information-extr
 
 https://roboflow.com/
 
-https://github.com/ashok426/Vehicle-number-plate-recognition-YOLOv5)
+https://github.com/ashok426/Vehicle-number-plate-recognition-YOLOv5
 
 https://github.com/ultralytics/yolov5/issues/2293
 
