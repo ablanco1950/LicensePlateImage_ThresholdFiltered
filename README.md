@@ -17,6 +17,8 @@ matter you
 
 import re
 
+import os
+
 
 It is convenient to have Spyder installed for the execution of the program and Anaconda for the installation of the aforementioned packages from the cmd.exe option
 
