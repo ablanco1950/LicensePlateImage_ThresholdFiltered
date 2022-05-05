@@ -13,8 +13,6 @@ import numpy as np
 
 import cv2
 
-matter you
-
 import re
 
 import os
