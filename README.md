@@ -5,13 +5,18 @@ Requirements:
 
 The tests have been carried out on a computer with Windows11
 
-You must have the corresponding packages installed.
+Must installed the packages corresponding to :
 
 import pytesseract
+
 import numpy as np
+
 import cv2
+
 matter you
+
 import re
+
 
 It is convenient to have Spyder installed for the execution of the program and Anaconda for the installation of the aforementioned packages from the cmd.exe option
 
