@@ -22,10 +22,10 @@ It is convenient to have Spyder installed for the execution of the program and A
 
 Functioning:
 
-Once the files have been downloaded, the test1 folder is decompressed with its subfolders:
+Once the files have been downloaded, the test1 folder wihch contains the images and labels to test, is decompressed with its subfolders:
 
 - images (which contains the car images, (downloaded from https://roboflow.com/) and the labels obtained by applying yolov5 to those images.
-- labels: which contains the coordinates of the boxes demarcated by yolov5 for the car and license plate objects. (supposed to have been obtained by applying https://github.com/ashok426/Vehicle-number-plate-recognition-YOLOv5)
+- labels: which contains the coordinates of the boxes demarcated by yolov5 for the car and license plate objects. ( have been obtained by applying https://github.com/ashok426/Vehicle-number-plate-recognition-YOLOv5)
 
 The test1 folder should be in the same directory as the GetNumberLicencePlate.py program.
 
