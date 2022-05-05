@@ -73,12 +73,18 @@ https://aicha-fatrah.medium.com/improve-the-quality-of-your-ocr-information-extr
 
 However, this threshold level cannot be fixed for each image, so one is implemented based on the total brightness of the image (sum of the values ​​of each pixel) to which an adjustment factor and bias are applied. Although the result is not applicable to all images due to their different qualities and circumstances.
 
-For license plate recognition it is necessary to filter the various license plate number formats in which they are presented. In the formats of roboflow images, a great variety and anarchy of formats is detected.
+For license plate recognition it is necessary to filter the various license plate number formats in which they are presented. In the formats of license plates from roboflow images, a great variety and anarchy of formats is detected.
 
-As the program operates on label files created with yolov5, it is convenient to test by installing the application https://github.com/ashok426/Vehicle-number-plate-recognition-YOLOv5, however when doing it on a windows11 computer I have had I have to make some changes and I have made some simplifications that may be of interest to someone who works in that environment and which I attach to the document:
+As the program operates on label files created with yolov5, it is convenient to test by installing the application https://github.com/ashok426/Vehicle-number-plate-recognition-YOLOv5, however when doing it on a windows11 computer I have had I have to make some changes and I have made some simplifications that may be of interest to someone who works in that environment and which I attach to this document:
 
 References:
+
 https://aicha-fatrah.medium.com/improve-the-quality-of-your-ocr-information-extraction-ebc93d905ac4
+
 https://roboflow.com/
+
 https://github.com/ashok426/Vehicle-number-plate-recognition-YOLOv5)
+
 https://github.com/ultralytics/yolov5/issues/2293
+
+https://towardsdatascience.com/the-practical-guide-for-object-detection-with-yolov5-algorithm-74c04aac4843
