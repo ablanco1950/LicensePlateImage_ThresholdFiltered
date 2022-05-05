@@ -41,15 +41,25 @@ For inspection, it presents the images of each car and then those of its license
 By console the following messages are obtained:
 
 Reading images from test1\images\
+
 Reading labels from test1\labels\
+
 Number of images : 7
+
 Number of labels : 7
+
 Car 1 the license plate is not recognized
+
 Car 2 the license plate is not recognized
+
 Car 3 the license plate is recognized : 2122267
+
 Car 4 the license plate is recognized : VI47 JAR
+
 Car 5 the license plate is recognized : WM64 UMA
+
 Car 6 the license plate is recognized : PL GO 321
+
 Car 7 the license plate is recognized : M5 CEU
 
 Comments:
