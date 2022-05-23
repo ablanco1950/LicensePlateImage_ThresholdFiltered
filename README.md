@@ -75,7 +75,31 @@ However, this threshold level cannot be fixed for each image, so one is implemen
 
 For license plate recognition it is necessary to filter the various license plate number formats in which they are presented. In the formats of license plates from roboflow images, a great variety and anarchy of formats is detected.
 
-As the program operates on label files created with yolov5, it is convenient to test by installing the application https://github.com/ashok426/Vehicle-number-plate-recognition-YOLOv5, however when doing it on a windows11 computer I have had I have to make some changes and I have made some simplifications that may be of interest to someone who works in that environment and which I attach to this document:
+As the program operates on label files created with yolov5, it is convenient to test by installing the application https://github.com/ashok426/Vehicle-number-plate-recognition-YOLOv5, however when doing it on a windows11 computer I have had I have to make some changes and I have made some simplifications that may be of interest to someone who works in that environment and which I attach to this document.
+
+On 05/23/2022 a new version is introduced:
+=========================================
+GetNumberLicensePlate.py
+
+Which is intended by varying the threshold level in a loop above and below the experimental formula of the thresold, that the correct enrollment is obtained for the most part.
+
+For its execution, it needs that in the same directory of the program there is the Test2 directory that is attached and that contains the images and labels of the test.
+
+It also requires the TrueLicenses.txt file in which the true license plates go, arranged in the same order as the images, to allow verification.
+
+The results are:
+
+HIT: the true license plate has been detected as the majority among all those provided by pytesseract
+
+DETECTED: The true license plate has been detected by pytesseract, but it is not the majority.
+
+NOT DETECTED: pytesseract has detected license plates, but none match the real one
+
+NOT RECOGNIZED: pytesseract could not detect a license plate number.
+
+The pyteseract results are filtered according to some registration formats, not all, which allows debugging.
+
+This is a very slow brute force process
 
 References:
 
