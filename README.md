@@ -79,7 +79,7 @@ As the program operates on label files created with yolov5, it is convenient to 
 
 On 05/23/2022 a new version is introduced:
 =========================================
-GetNumberLicensePlate.py
+GetNumberLicensePlateV1.py
 
 Which is intended by varying the threshold level in a loop above and below the experimental formula of the thresold, that the correct enrollment is obtained for the most part.
 
