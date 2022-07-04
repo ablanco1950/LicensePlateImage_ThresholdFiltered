@@ -101,6 +101,10 @@ The pyteseract results are filtered according to some registration formats, not 
 
 This is a very slow brute force process
 
+On 05/23/2022 a new ML version is introduced:
+=========================================
+From a set of images of cars with the labels of their license plates, a Y_train is formed consisting of the set of thresholds at which each license plate is recognized by pytesseract, the X_train is made up of all the pixels of each image and the engine it is the sklearn SVM that allows you to make predictions of the threshord that would require a photo license plate to be recognized by pytesseract.
+
 References:
 
 https://aicha-fatrah.medium.com/improve-the-quality-of-your-ocr-information-extraction-ebc93d905ac4
