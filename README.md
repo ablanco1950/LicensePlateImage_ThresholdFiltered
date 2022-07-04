@@ -114,8 +114,18 @@ Executing:
 
 GetNumberLicencePlateV6SVM.py
 
-the predictions of first ten  licenses plate of test4Training are getting
+The predictions of first ten  licenses plate of test4Training are getting
 
+Observations:
+
+Only images for which pytesseract can recognize the license plate number by varying the threshold are considered.
+
+The error rate is not good since it operates with a training of 114 thresholds, which is small. When executing GetNumberLicencePlateV6SVM,py for the first 10 license plates, license plate 1032148 appears confused as 1932148, however adjusting the parameters at the beginning of the program:
+imgStart=1
+imgEnd=3
+With which the test is reduced to a single record and the training is increased by 9 records, the licenset appears correctly predicted.
+
+The name of each image, label and thresold has been changed. originally assigned by roboflow, so that they correspond to the license plate  number, allowing to detect failures and successes in the tests
 
 References:
 
