@@ -108,7 +108,7 @@ From a set of images of cars with the labels of their license plates (test4Train
 The training file is created by running:
 CreateThresoldTraining.py
 
-the Y_train values ar in the files, one by each license, en test4Training\thresholds
+the Y_train values are in the files, one by each license, en test4Training\thresholds
 
 Executing:
 
