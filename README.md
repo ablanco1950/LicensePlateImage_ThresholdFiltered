@@ -103,7 +103,16 @@ This is a very slow brute force process
 
 On 05/23/2022 a new ML version is introduced:
 =========================================
-From a set of images of cars with the labels of their license plates, a Y_train is formed consisting of the set of thresholds at which each license plate is recognized by pytesseract, the X_train is made up of all the pixels of each image and the engine it is the sklearn SVM that allows you to make predictions of the threshord that would require a photo license plate to be recognized by pytesseract.
+From a set of images of cars with the labels of their license plates (test4Training folder), a Y_train is formed consisting of the set of thresholds at which each license plate is recognized by pytesseract, the X_train is made up of all the pixels of each image and the engine it is the sklearn SVM that allows you to make predictions of the threshord that would require a photo license plate to be recognized by pytesseract.
+
+The training file is created by running:
+CreateThresoldTraining.py
+
+the Y_train values ar in the files, one by each license, en test4Training\thresholds
+
+Executing GetNumberLicencePlateV6SVM.py
+
+Are getting the predictions of first ten  licenses plate of test4Training
 
 References:
 
