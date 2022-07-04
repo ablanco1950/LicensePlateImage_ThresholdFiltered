@@ -109,6 +109,8 @@ https://roboflow.com/
 
 https://github.com/ashok426/Vehicle-number-plate-recognition-YOLOv5
 
+https://gist.github.com/endolith/334196bac1cac45a4893#
+
 https://towardsdatascience.com/the-practical-guide-for-object-detection-with-yolov5-algorithm-74c04aac4843
 
 https://github.com/ultralytics/yolov5/issues/2293
