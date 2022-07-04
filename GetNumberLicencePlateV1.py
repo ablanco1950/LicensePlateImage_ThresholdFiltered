@@ -31,6 +31,70 @@ ContLoopMax=400
 import os
 import re
 
+import imutils
+#####################################################################
+"""
+Copied from https://gist.github.com/endolith/334196bac1cac45a4893#
+
+other source:
+    https://stackoverflow.com/questions/46084476/radon-transformation-in-python
+"""
+
+
+
+from skimage.transform import radon
+
+import numpy
+from numpy import  mean, array, blackman, sqrt, square
+from numpy.fft import rfft
+
+
+
+try:
+    # More accurate peak finding from
+    # https://gist.github.com/endolith/255291#file-parabolic-py
+    from parabolic import parabolic
+
+    def argmax(x):
+        return parabolic(x, numpy.argmax(x))[0]
+except ImportError:
+    from numpy import argmax
+
+
+def GetRotationImage(image):
+    
+   
+    I=image
+    I = I - mean(I)  # Demean; make the brightness extend above and below zero
+    
+    
+    # Do the radon transform and display the result
+    sinogram = radon(I)
+   
+    
+    # Find the RMS value of each row and find "busiest" rotation,
+    # where the transform is lined up perfectly with the alternating dark
+    # text and white lines
+      
+    # rms_flat does no exist in recent versions
+    #r = array([mlab.rms_flat(line) for line in sinogram.transpose()])
+    r = array([sqrt(mean(square(line))) for line in sinogram.transpose()])
+    rotation = argmax(r)
+    #print('Rotation: {:.2f} degrees'.format(90 - rotation))
+    #plt.axhline(rotation, color='r')
+    
+    # Plot the busy row
+    row = sinogram[:, rotation]
+    N = len(row)
+    
+    # Take spectrum of busy row and find line spacing
+    window = blackman(N)
+    spectrum = rfft(row * window)
+    
+    frequency = argmax(abs(spectrum))
+   
+    return rotation, spectrum, frequency
+#####################################################################
 
 #########################################################################
 def loadimages (dirname ):
@@ -209,9 +273,9 @@ for i in range (len(images)):
     
     image=images[i]
    
-    #cv2.imshow("Test ", image)
+    cv2.imshow("Test ", image)
     
-    #cv2.waitKey()
+    cv2.waitKey()
     
     SwEnd=0
     
@@ -222,12 +286,12 @@ for i in range (len(images)):
     #print("Car" + str(NumberImageOrder) + " Brillo : " +str(SumBrightness) +   
     #      " Desviacion : " + str(Desv))
     threshold=(SumBrightness/177529.84) + bias
-    #print("SumBrightness = " + str(SumBrightness))   
+    print("SumBrightness = " + str(SumBrightness) + " Desviacion = " + str(Desv))   
     #print(" threshold " + str(threshold))
     gray=image[Y_start:Y_end, X_start:X_end]
     
     
-    gray=cv2.resize(gray,None,fx=2.0,fy=2.0,interpolation=cv2.INTER_CUBIC)
+    gray=cv2.resize(gray,None,fx=1.78,fy=1.78,interpolation=cv2.INTER_CUBIC)
     gray = cv2.resize(gray, (X_resize,Y_resize), interpolation = cv2.INTER_AREA)
    
     SumBrightnessLic=np.sum(gray)
@@ -244,6 +308,17 @@ for i in range (len(images)):
   
         if ContLoop >ContLoopMax: break
         ContLoop=ContLoop+1
+        
+        rotation, spectrum, frquency =GetRotationImage(gray)
+        rotation=90 - rotation
+        
+        #print("Car" + str(NumberImageOrder) + " Brillo : " +str(SumBrightnessLic) +   
+        #      " Desviacion : " + str(DesvLic))
+        
+        if rotation !=0 and rotation !=90:
+            #print("SE ROTA LA IMAGEN " + str(rotation) + " GRADOS")
+            gray=imutils.rotate(gray,angle=rotation)
+       
        
         #https://java2blog.com/cv2-threshold-python/
         #https://docs.opencv.org/4.x/d7/d4d/tutorial_py_thresholding.html
