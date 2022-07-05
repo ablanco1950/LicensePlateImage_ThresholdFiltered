@@ -125,7 +125,7 @@ imgStart=1
 imgEnd=3
 With which the test is reduced to a single record and the training is increased by 9 records, the license appears correctly predicted.
 
-The name of each image, label and thresold has been changed. originally assigned by roboflow, so that they correspond to the license plate  number, allowing to detect failures and successes in the tests
+The name of each image, label and thresold has been changed, originally assigned by roboflow, so that they correspond to the license plate  number, allowing to detect failures and successes in the tests
 
 References:
 
