@@ -75,7 +75,7 @@ However, this threshold level cannot be fixed for each image, so one is implemen
 
 For license plate recognition it is necessary to filter the various license plate number formats in which they are presented. In the formats of license plates from roboflow images, a great variety and anarchy of formats is detected.
 
-As the program operates on label files created with yolov5, it is convenient to test by installing the application https://github.com/ashok426/Vehicle-number-plate-recognition-YOLOv5, however when doing it on a windows11 computer I have had I have to make some changes and I have made some simplifications that may be of interest to someone who works in that environment and which I attach to this document.
+As the program operates on label files created with yolov5, it is convenient to test by installing the application https://github.com/ashok426/Vehicle-number-plate-recognition-YOLOv5, however when doing it on a windows 11 computer I had  to make some changes and I have made some simplifications that may be of interest to someone who works in that environment. Are attached in documenInstalationCarLicencePlateWithYolov5.docx
 
 On 05/23/2022 a new version is introduced:
 =========================================
