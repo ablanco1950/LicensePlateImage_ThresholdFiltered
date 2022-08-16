@@ -130,7 +130,7 @@ The name of each image, label and thresold has been changed, originally assigned
 On 08/16/2022 
 =============
 
-A new version is introduced that makes use of the filtering provided by the OTSU filter (developed at https://learnopencv.com/otsu-thresholding-with-opencv/) which is complemented in its failures by two filters , one based on the brightness of the image and another on the stability of the image with the variations of the threshold. Using all the possibilities of the THRESH parameter
+A new version is introduced that makes use of the filtering provided by the OTSU filter (developed at https://docs.opencv.org/4.x/d7/d4d/tutorial_py_thresholding.html   and https://learnopencv.com/otsu-thresholding-with-opencv/) which is complemented in its failures by two filters , one based on the brightness of the image and another on the stability of the image with the variations of the threshold (similar as in cv2.MSER). Using all the possibilities of the THRESH parameter
 
 It is tested by running the python module:
 
