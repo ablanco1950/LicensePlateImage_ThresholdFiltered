@@ -14,6 +14,7 @@ dirname= dir +"test4Training\\images"
 dirname_labels = dir +"test4Training\\labels"
 #dirname_training=dir + "test4Training\\images"
 dirname_thresolds=dir + "test4Training\\thresolds"
+
 ######################################################################
 
 import pytesseract
@@ -393,11 +394,6 @@ def loadimagesRoboflow (dirname):
 # MAIN
 ##########################################################
 
-
-
-
-
-
 labels=loadlabelsRoboflow(dirname_labels)
 
 imagesComplete, Licenses=loadimagesRoboflow(dirname)
@@ -438,21 +434,108 @@ for i in range (len(images)):
         SwEnd=0
         License=Licenses[i]
         SwEncontrado=0
-                
+         
+        #
+        # https://docs.opencv.org/4.x/d7/d4d/tutorial_py_thresholding.html
+        #
              
-                  
-        threshold=OTSU_Threshold(gray)
-        #https://omes-va.com/simple-thresholding/
-        ret, gray1=cv2.threshold(gray,threshold,255,  cv2.THRESH_TRUNC)
+        gray1 = cv2.adaptiveThreshold(gray,255,cv2.ADAPTIVE_THRESH_MEAN_C,\
+            cv2.THRESH_BINARY,11,2) 
         text = pytesseract.image_to_string(gray1, lang='eng',  \
             config='--psm 13 --oem 3')
        
         text = ''.join(char for char in text if char.isalnum())
         
         if text==Licenses[i]:
-                print(text + "  Hit with OTSU and THRESH_TRUNC" )
+                print(text + "  Hit with adaptive Threshold Mean and THRESH_BINARY" )
                 TotHits=TotHits+1
                 SwEncontrado=1
+                
+        if SwEncontrado==0:
+             gray1 = cv2.adaptiveThreshold(gray,255,cv2.ADAPTIVE_THRESH_MEAN_C,\
+                 cv2.THRESH_BINARY_INV,11,2) 
+             text = pytesseract.image_to_string(gray1, lang='eng',  \
+                 config='--psm 13 --oem 3')
+            
+             text = ''.join(char for char in text if char.isalnum())
+             
+             if text==Licenses[i]:
+                     print(text + "  Hit with adaptive Threshold  Mean and THRESH_BINARY_INV" )
+                     TotHits=TotHits+1
+                     SwEncontrado=1  
+                     
+        if SwEncontrado==0:
+            
+             gray1 = cv2.adaptiveThreshold(gray,255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C,\
+                 cv2.THRESH_BINARY,11,2)  
+             text = pytesseract.image_to_string(gray1, lang='eng',  \
+                 config='--psm 13 --oem 3')
+            
+             text = ''.join(char for char in text if char.isalnum())
+             
+             if text==Licenses[i]:
+                     print(text + "  Hit with adaptive Threshold Gaussian and THRESH_BINARY" )
+                     TotHits=TotHits+1
+                     SwEncontrado=1  
+                     
+        if SwEncontrado==0:
+            
+             gray1 = cv2.adaptiveThreshold(gray,255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C,\
+                 cv2.THRESH_BINARY_INV,11,2)  
+             text = pytesseract.image_to_string(gray1, lang='eng',  \
+                 config='--psm 13 --oem 3')
+            
+             text = ''.join(char for char in text if char.isalnum())
+             
+             if text==Licenses[i]:
+                     print(text + "  Hit with adaptive Threshold Gaussian and THRESH_BINARY_INV" )
+                     TotHits=TotHits+1
+                     SwEncontrado=1  
+                    
+        if SwEncontrado==0:
+            
+             #   Otsu's thresholding
+             ret2,gray1 = cv2.threshold(gray,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
+             text = pytesseract.image_to_string(gray1, lang='eng',  \
+                 config='--psm 13 --oem 3')
+            
+             text = ''.join(char for char in text if char.isalnum())
+             
+             if text==Licenses[i]:
+                     print(text + "  Hit with Otsu's thresholding of cv2 and THRESH_BINARY_INV" )
+                     TotHits=TotHits+1
+                     SwEncontrado=1   
+                     
+        if SwEncontrado==0:
+            
+            # Otsu's thresholding after Gaussian filtering
+             blur = cv2.GaussianBlur(gray,(5,5),0)
+             ret3,gray1 = cv2.threshold(blur,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
+             
+             text = pytesseract.image_to_string(gray1, lang='eng',  \
+                 config='--psm 13 --oem 3')
+            
+             text = ''.join(char for char in text if char.isalnum())
+             
+             if text==Licenses[i]:
+                     print(text + "  Hit with Otsu's thresholding of cv2 , Gaussian filtering and THRESH_BINARY" )
+                     TotHits=TotHits+1
+                     SwEncontrado=1               
+                     
+        if SwEncontrado==0:
+            
+            threshold=OTSU_Threshold(gray)
+            #https://omes-va.com/simple-thresholding/
+            ret, gray1=cv2.threshold(gray,threshold,255,  cv2.THRESH_TRUNC)
+            text = pytesseract.image_to_string(gray1, lang='eng',  \
+                config='--psm 13 --oem 3')
+           
+            text = ''.join(char for char in text if char.isalnum())
+            
+            if text==Licenses[i]:
+                    print(text + "  Hit with OTSU and THRESH_TRUNC" )
+                    TotHits=TotHits+1
+                    SwEncontrado=1
                 
         if SwEncontrado==0:
              ret, gray1=cv2.threshold(gray,threshold,255,  cv2.THRESH_TOZERO) 
@@ -575,7 +658,7 @@ for i in range (len(images)):
            text = ''.join(char for char in text if char.isalnum())
            
            if text==Licenses[i]:
-                   print(text + "  Acierto con Stable y THRESH_TRUNC" )
+                   print(text + "  Hit con Stable y THRESH_TRUNC" )
                    TotHits=TotHits+1
                    SwEncontrado=1
                    
@@ -587,7 +670,7 @@ for i in range (len(images)):
            text = ''.join(char for char in text if char.isalnum())
            
            if text==Licenses[i]:
-                   print(text + "  Acierto con Stable y THRESH_BINARY" )
+                   print(text + "  Hit con Stable y THRESH_BINARY" )
                    TotHits=TotHits+1
                    SwEncontrado=1
         
@@ -599,7 +682,7 @@ for i in range (len(images)):
            text = ''.join(char for char in text if char.isalnum())
            
            if text==Licenses[i]:
-                   print(text + "  Acierto con Stable y THRESH_BINARY_INV" )
+                   print(text + "  Hit with Stable y THRESH_BINARY_INV" )
                    TotHits=TotHits+1
                    SwEncontrado=1            
         
@@ -611,7 +694,7 @@ for i in range (len(images)):
            text = ''.join(char for char in text if char.isalnum())
            
            if text==Licenses[i]:
-                   print(text + "  Acierto con Stable y THRESH_TOZERO" )
+                   print(text + "  Hit with Stable y THRESH_TOZERO" )
                    TotHits=TotHits+1
                    SwEncontrado=1
         
@@ -623,7 +706,7 @@ for i in range (len(images)):
            text = ''.join(char for char in text if char.isalnum())
            
            if text==Licenses[i]:
-                   print(text + "  Acierto con Stable y THRESH_TOZERO_INV" )
+                   print(text + "  Hit con Stable y THRESH_TOZERO_INV" )
                    TotHits=TotHits+1
                    SwEncontrado=1              
         
