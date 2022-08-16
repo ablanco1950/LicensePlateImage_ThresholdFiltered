@@ -309,4 +309,3 @@ https://towardsdatascience.com/the-practical-guide-for-object-detection-with-yol
 
 https://github.com/ultralytics/yolov5/issues/2293
 
-https://learnopencv.com/otsu-thresholding-with-opencv/
