@@ -1,5 +1,5 @@
 # LicensePlateImage_ThresholdFiltered
-From some files of images and labels obtained by applying the project presented at https://github.com/ashok426/Vehicle-number-plate-recognition-YOLOv5, the images of license plates are filtered through a threshold that allows a better recognition of the license plate numbers by pytesseract. Using all the possibilities of the THRESH parameter
+From some files of images and labels obtained by applying the project presented at https://github.com/ashok426/Vehicle-number-plate-recognition-YOLOv5, the images of license plates are filtered through a threshold that allows a better recognition of the license plate numbers by pytesseract. 
 
 Requirements:
 
@@ -130,7 +130,7 @@ The name of each image, label and thresold has been changed, originally assigned
 On 08/16/2022 
 =============
 
-A new version is introduced that makes use of the filtering provided by the OTSU filter (developed at https://learnopencv.com/otsu-thresholding-with-opencv/) which is complemented in its failures by two filters , one based on the brightness of the image and another on the stability of the image with the variations of the threshold.
+A new version is introduced that makes use of the filtering provided by the OTSU filter (developed at https://learnopencv.com/otsu-thresholding-with-opencv/) which is complemented in its failures by two filters , one based on the brightness of the image and another on the stability of the image with the variations of the threshold. Using all the possibilities of the THRESH parameter
 
 It is tested by running the python module:
 
