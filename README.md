@@ -301,6 +301,8 @@ https://gist.github.com/endolith/334196bac1cac45a4893#
 
 https://learnopencv.com/otsu-thresholding-with-opencv/
 
+https://docs.opencv.org/4.x/d7/d4d/tutorial_py_thresholding.html
+
 https://omes-va.com/simple-thresholding/
 
 https://towardsdatascience.com/the-practical-guide-for-object-detection-with-yolov5-algorithm-74c04aac4843
