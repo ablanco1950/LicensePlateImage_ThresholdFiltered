@@ -130,7 +130,7 @@ The name of each image, label and thresold has been changed, originally assigned
 On 08/16/2022 
 =============
 
-Anew version is introduced that makes use of the filtering provided by the OTSU filter (developed at https://learnopencv.com/otsu-thresholding-with-opencv/) which is complemented in its failures by two filters , one based on the brightness of the image and another on the stability of the image with the variations of the threshold.
+A new version is introduced that makes use of the filtering provided by the OTSU filter (developed at https://learnopencv.com/otsu-thresholding-with-opencv/) which is complemented in its failures by two filters , one based on the brightness of the image and another on the stability of the image with the variations of the threshold.
 
 It is tested by running the python module:
 
@@ -148,75 +148,144 @@ Image of SHEILL with low standard deviation, will be difficult to be recognized
 Number of imagenes : 114
 Number of  labels : 114
 Number of   licenses : 114
+
 1000051  Hit with OTSU and THRESH_TRUNC
+
 1032148  Hit with OTSU and THRESH_TRUNC
+
 1128NS  Hit with OTSU and THRESH_TRUNC
+
 118GRP  Hit with OTSU and THRESH_TRUNC
+
 1277DPZ  Hit with OTSU and THRESH_TOZERO
+
 2122267  Hit with OTSU and THRESH_TRUNC
+
 25810X  Acierto con Stable y THRESH_TRUNC
+
 27BN42  Hit with OTSU and THRESH_TRUNC
+
 3008GWK  Hit with OTSU and THRESH_TRUNC
+
 3100000  Hit with OTSU and THRESH_TRUNC
+
 3646HBH  Hit with  Brightness and THRESH_TOZERO
+
 41RSTZ  Hit with OTSU and THRESH_TRUNC
+
 5752FXX  Hit with OTSU and THRESH_TOZERO
+
 5777770  Hit with OTSU and THRESH_TRUNC
+
 9222228  Hit with OTSU and THRESH_TRUNC
+
 9999868  Hit with OTSU and THRESH_TRUNC
+
 A69985T  Hit with OTSU and THRESH_TRUNC
+
 ACHTUNG  Hit with Brightness and THRESH_BINARY
+
 AHYEW  Hit with OTSU and THRESH_TRUNC
+
 ARZT120  Hit with OTSU and THRESH_TOZERO
+
 AUDIZINE  Hit with OTSU and THRESH_TRUNC
+
 B76ZHN  Hit with OTSU and THRESH_TRUNC
+
 B81JKY  Hit with OTSU and THRESH_TRUNC
+
 BANY976  Hit with OTSU and THRESH_BINARY
+
 BEHM927  Hit with  Brightness and THRESH_TOZERO
+
 BM351  Hit with OTSU and THRESH_TRUNC
+
 BMWM5  Hit with Brightness and THRESH_BINARY_INV
+
 CBMUK  Hit with OTSU and THRESH_TOZERO_INV
+
 EMOTION  Hit with OTSU and THRESH_TRUNC
+
 EXCUSEM3  Hit with OTSU and THRESH_TOZERO_INV
+
 FSXY423  Hit with OTSU and THRESH_BINARY
+
 FVIOUHP  Hit with OTSU and THRESH_TOZERO
+
 GN64OTP  Hit with OTSU and THRESH_BINARY
+
 GOOGLE  Hit with  Brightness and THRESH_TRUNC
+
 GPG  Hit with OTSU and THRESH_TOZERO
+
 HAMSTUR  Hit with OTSU and THRESH_TRUNC
+
 HF58HXP  Hit with  Brightness and THRESH_TOZERO
+
 HTTPME  Hit with OTSU and THRESH_TOZERO
+
 INA7506  Hit with OTSU and THRESH_TRUNC
+
 LIMES  Hit with OTSU and THRESH_TOZERO_INV
+
 LNXGEEK  Hit with OTSU and THRESH_TOZERO
+
 MVU4688  Hit with Brightness and THRESH_BINARY
+
 NTHGLFT  Acierto con Stable y THRESH_TOZERO
+
 OLDHAG  Hit with OTSU and THRESH_BINARY
+
 OUTSTDN  Hit with OTSU and THRESH_TRUNC
+
 PLUGOK  Hit with OTSU and THRESH_TRUNC
+
 PWF666  Hit with OTSU and THRESH_TRUNC
+
 RLO4XVM  Hit with OTSU and THRESH_TRUNC
+
 SAA6878Y  Hit with OTSU and THRESH_TOZERO_INV
+
 SHEILL  Hit with Brightness and THRESH_BINARY_INV
+
 SKA  Hit with OTSU and THRESH_BINARY_INV
+
 TL03GOG  Hit with OTSU and THRESH_TOZERO
+
 TY27924  Hit with OTSU and THRESH_TRUNC
+
 UM96201  Hit with OTSU and THRESH_TRUNC
+
 V328FNN  Hit with Brightness and THRESH_BINARY
+
 V8PTRL  Acierto con Stable y THRESH_BINARY_INV
+
 VI47JAR  Hit with OTSU and THRESH_TRUNC
+
 VNK296GP  Hit with  Brightness and THRESH_TOZERO
+
 VY90540  Hit with OTSU and THRESH_TRUNC
+
 W326AVE  Hit with OTSU and THRESH_TRUNC
+
 WEFLYN  Hit with OTSU and THRESH_BINARY
+
 WM64UMA  Hit with OTSU and THRESH_TOZERO
+
 WONELLY  Hit with OTSU and THRESH_TOZERO
+
 WXD1620  Acierto con Stable y THRESH_TOZERO
+
 XFG2121  Hit with OTSU and THRESH_TOZERO
+
 ZUM619  Hit with  Brightness and THRESH_TOZERO
 
+
 Total Hits = 66
+
 Total Failures = 48
+
 
 
 
@@ -229,6 +298,10 @@ https://roboflow.com/
 https://github.com/ashok426/Vehicle-number-plate-recognition-YOLOv5
 
 https://gist.github.com/endolith/334196bac1cac45a4893#
+
+https://learnopencv.com/otsu-thresholding-with-opencv/
+
+
 
 https://towardsdatascience.com/the-practical-guide-for-object-detection-with-yolov5-algorithm-74c04aac4843
 
