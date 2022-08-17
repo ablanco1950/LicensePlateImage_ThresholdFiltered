@@ -286,7 +286,9 @@ Total Hits = 66
 
 Total Failures = 48
 
-
+The predictions have been possible because the car license plate number was known in advance, 
+otherwise it would have been necessary to know the format of the license plate and/or  to incorporate 
+a control digit in the license plate to verify the accuracy of the number detected
 
 
 References:
