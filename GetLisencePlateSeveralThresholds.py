@@ -371,8 +371,11 @@ def loadimagesRoboflow (dirname):
                  License=filename[:len(filename)-4]
                 
                  image = cv2.imread(filepath)
+                 
+                 #https://towardsdatascience.com/extract-text-from-memes-with-python-opencv-tesseract-ocr-63c2ccd72b69
+                 gray= cv2.bilateralFilter(image,5, 55,60)
                 
-                 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+                 gray = cv2.cvtColor(gray, cv2.COLOR_BGR2GRAY)
                  
                  SumBrightness=np.sum(image)
                  
