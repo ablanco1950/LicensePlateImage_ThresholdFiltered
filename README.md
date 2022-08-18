@@ -149,142 +149,83 @@ Number of imagenes : 114
 Number of  labels : 114
 Number of   licenses : 114
 
-1000051  Hit with OTSU and THRESH_TRUNC
-
-1032148  Hit with OTSU and THRESH_TRUNC
-
-1128NS  Hit with OTSU and THRESH_TRUNC
-
-118GRP  Hit with OTSU and THRESH_TRUNC
-
-1277DPZ  Hit with OTSU and THRESH_TOZERO
-
-2122267  Hit with OTSU and THRESH_TRUNC
-
-25810X  Acierto con Stable y THRESH_TRUNC
-
-27BN42  Hit with OTSU and THRESH_TRUNC
-
+1000051  Hit with Otsu's thresholding of cv2 and THRESH_BINARY_INV
+1032148  Hit with adaptive Threshold Mean and THRESH_BINARY
+1128NS  Hit with Otsu's thresholding of cv2 and THRESH_BINARY_INV
+118GRP  Hit with adaptive Threshold Mean and THRESH_BINARY
+1277DPZ  Hit with  Brightness and THRESH_TOZERO
+2122267  Hit with adaptive Threshold Mean and THRESH_BINARY
+247VIP9  Hit with Brightness and THRESH_BINARY
+25810X  Hit with Otsu's thresholding of cv2 and THRESH_BINARY_INV
+2999961  Hit with Otsu's thresholding of cv2 and THRESH_BINARY_INV
 3008GWK  Hit with OTSU and THRESH_TRUNC
-
-3100000  Hit with OTSU and THRESH_TRUNC
-
-3646HBH  Hit with  Brightness and THRESH_TOZERO
-
-41RSTZ  Hit with OTSU and THRESH_TRUNC
-
-5752FXX  Hit with OTSU and THRESH_TOZERO
-
-5777770  Hit with OTSU and THRESH_TRUNC
-
-9222228  Hit with OTSU and THRESH_TRUNC
-
-9999868  Hit with OTSU and THRESH_TRUNC
-
+3100000  Hit with OTSU and THRESH_TOZERO
+41RSTZ  Hit with Brightness and THRESH_BINARY
+5752FXX  Hit with adaptive Threshold Gaussian and THRESH_BINARY
+5777770  Hit with Otsu's thresholding of cv2 and THRESH_BINARY_INV
+589222  Hit with OTSU and THRESH_BINARY
+9222228  Hit with Otsu's thresholding of cv2 , Gaussian filtering and THRESH_BINARY
+9999868  Hit with adaptive Threshold Gaussian and THRESH_BINARY
 A69985T  Hit with OTSU and THRESH_TRUNC
-
-ACHTUNG  Hit with Brightness and THRESH_BINARY
-
-AHYEW  Hit with OTSU and THRESH_TRUNC
-
-ARZT120  Hit with OTSU and THRESH_TOZERO
-
-AUDIZINE  Hit with OTSU and THRESH_TRUNC
-
-B76ZHN  Hit with OTSU and THRESH_TRUNC
-
-B81JKY  Hit with OTSU and THRESH_TRUNC
-
-BANY976  Hit with OTSU and THRESH_BINARY
-
-BEHM927  Hit with  Brightness and THRESH_TOZERO
-
-BM351  Hit with OTSU and THRESH_TRUNC
-
-BMWM5  Hit with Brightness and THRESH_BINARY_INV
-
-CBMUK  Hit with OTSU and THRESH_TOZERO_INV
-
-EMOTION  Hit with OTSU and THRESH_TRUNC
-
+ACHTUNG  Hit with adaptive Threshold Mean and THRESH_BINARY
+AHYEW  Hit with Otsu's thresholding of cv2 and THRESH_BINARY_INV
+ARZT120  Hit with Otsu's thresholding of cv2 and THRESH_BINARY_INV
+AUDIZINE  Hit with adaptive Threshold Mean and THRESH_BINARY
+B76ZHN  Hit with Otsu's thresholding of cv2 and THRESH_BINARY_INV
+B81JKY  Hit with Otsu's thresholding of cv2 , Gaussian filtering and THRESH_BINARY
+BANY976  Hit with adaptive Threshold Mean and THRESH_BINARY
+BEHM927  Hit with adaptive Threshold Mean and THRESH_BINARY
+BM351  Hit with  Brightness and THRESH_TRUNC
+BMWM5  Hit with OTSU and THRESH_TOZERO
+BT63UYN  Hit with OTSU and THRESH_TRUNC
+CBMUK  Hit with adaptive Threshold Mean and THRESH_BINARY
+EMOTION  Hit with Otsu's thresholding of cv2 and THRESH_BINARY_INV
 EXCUSEM3  Hit with OTSU and THRESH_TOZERO_INV
-
-FSXY423  Hit with OTSU and THRESH_BINARY
-
-FVIOUHP  Hit with OTSU and THRESH_TOZERO
-
-GN64OTP  Hit with OTSU and THRESH_BINARY
-
+FVIOUHP  Hit with Otsu's thresholding of cv2 , Gaussian filtering and THRESH_BINARY
+GN64OTP  Hit with Otsu's thresholding of cv2 , Gaussian filtering and THRESH_BINARY
 GOOGLE  Hit with  Brightness and THRESH_TRUNC
-
-GPG  Hit with OTSU and THRESH_TOZERO
-
-HAMSTUR  Hit with OTSU and THRESH_TRUNC
-
-HF58HXP  Hit with  Brightness and THRESH_TOZERO
-
-HTTPME  Hit with OTSU and THRESH_TOZERO
-
-INA7506  Hit with OTSU and THRESH_TRUNC
-
+GPG  Hit with adaptive Threshold Mean and THRESH_BINARY
+HAMSTUR  Hit with adaptive Threshold Mean and THRESH_BINARY
+HF3461  Hit with adaptive Threshold Mean and THRESH_BINARY
+HF58HXP  Hit with adaptive Threshold Mean and THRESH_BINARY
+HTTPME  Hit with Otsu's thresholding of cv2 and THRESH_BINARY_INV
+INA7506  Hit with Otsu's thresholding of cv2 and THRESH_BINARY_INV
+J1S1  Hit with OTSU and THRESH_TRUNC
 LIMES  Hit with OTSU and THRESH_TOZERO_INV
-
-LNXGEEK  Hit with OTSU and THRESH_TOZERO
-
-MVU4688  Hit with Brightness and THRESH_BINARY
-
-NTHGLFT  Acierto con Stable y THRESH_TOZERO
-
-OLDHAG  Hit with OTSU and THRESH_BINARY
-
-OUTSTDN  Hit with OTSU and THRESH_TRUNC
-
-PLUGOK  Hit with OTSU and THRESH_TRUNC
-
-PWF666  Hit with OTSU and THRESH_TRUNC
-
-RLO4XVM  Hit with OTSU and THRESH_TRUNC
-
-SAA6878Y  Hit with OTSU and THRESH_TOZERO_INV
-
-SHEILL  Hit with Brightness and THRESH_BINARY_INV
-
-SKA  Hit with OTSU and THRESH_BINARY_INV
-
-TL03GOG  Hit with OTSU and THRESH_TOZERO
-
+LNXGEEK  Hit with adaptive Threshold Mean and THRESH_BINARY
+M5CEU  Hit with adaptive Threshold Gaussian and THRESH_BINARY
+MMX3001  Hit with OTSU and THRESH_TRUNC
+NTP56IM  Hit with OTSU and THRESH_TRUNC
+OLDHAG  Hit with Otsu's thresholding of cv2 and THRESH_BINARY_INV
+OUTSTDN  Hit with adaptive Threshold Mean and THRESH_BINARY
+PLUGOK  Hit with adaptive Threshold Mean and THRESH_BINARY
+PWF666  Hit with Otsu's thresholding of cv2 and THRESH_BINARY_INV
+RDHE4D  Hit with Otsu's thresholding of cv2 , Gaussian filtering and THRESH_BINARY
+RLO4XVM  Hit with adaptive Threshold Mean and THRESH_BINARY
+SAA6878Y  Hit with Otsu's thresholding of cv2 , Gaussian filtering and THRESH_BINARY
+SHEILL  Hit with  Brightness and THRESH_TOZERO_INV
+SKA  Hit with OTSU and THRESH_TOZERO_INV
+TL03GOG  Hit with OTSU and THRESH_TRUNC
 TY27924  Hit with OTSU and THRESH_TRUNC
+UM96201  Hit with adaptive Threshold Mean and THRESH_BINARY
+UW3932  Hit with adaptive Threshold Mean and THRESH_BINARY
+V328FNN  Hit with  Brightness and THRESH_TRUNC
+V8PTRL  Hit with Stable y THRESH_BINARY_INV
+VI47JAR  Hit with adaptive Threshold Gaussian and THRESH_BINARY
+VNK296GP  Hit with OTSU and THRESH_TOZERO
+VY90540  Hit with adaptive Threshold Mean and THRESH_BINARY
+W326AVE  Hit with Otsu's thresholding of cv2 , Gaussian filtering and THRESH_BINARY
+WEFLYN  Hit with Otsu's thresholding of cv2 and THRESH_BINARY_INV
+WM64UMA  Hit with Otsu's thresholding of cv2 and THRESH_BINARY_INV
+WONELLY  Hit with Otsu's thresholding of cv2 and THRESH_BINARY_INV
+WRP  Hit with adaptive Threshold Mean and THRESH_BINARY
+WXD1620  Hit with Stable y THRESH_TOZERO
+XFG2121  Hit with Otsu's thresholding of cv2 , Gaussian filtering and THRESH_BINARY
+YL08WUE  Hit with Otsu's thresholding of cv2 and THRESH_BINARY_INV
+ZUM619  Hit with OTSU and THRESH_TOZERO
 
-UM96201  Hit with OTSU and THRESH_TRUNC
-
-V328FNN  Hit with Brightness and THRESH_BINARY
-
-V8PTRL  Acierto con Stable y THRESH_BINARY_INV
-
-VI47JAR  Hit with OTSU and THRESH_TRUNC
-
-VNK296GP  Hit with  Brightness and THRESH_TOZERO
-
-VY90540  Hit with OTSU and THRESH_TRUNC
-
-W326AVE  Hit with OTSU and THRESH_TRUNC
-
-WEFLYN  Hit with OTSU and THRESH_BINARY
-
-WM64UMA  Hit with OTSU and THRESH_TOZERO
-
-WONELLY  Hit with OTSU and THRESH_TOZERO
-
-WXD1620  Acierto con Stable y THRESH_TOZERO
-
-XFG2121  Hit with OTSU and THRESH_TOZERO
-
-ZUM619  Hit with  Brightness and THRESH_TOZERO
-
-
-Total Hits = 66
-
-Total Failures = 48
+Total Hits = 74
+Total Failures = 40
 
 The predictions have been possible because the car license plate number was known in advance, 
 otherwise it would have been necessary to know the format of the license plate and/or  to incorporate 
