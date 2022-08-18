@@ -141,13 +141,21 @@ that  only need the test4Training folder with 114 image files and their labels.
 the result is :
 
 Reading labels from  test4Training\labels\
+
 Reading imagenes from  test4Training\images\
+
 Image of GE1466 with low standard deviation, will be difficult to be recognized
+
 Image of LCA850 with low standard deviation, will be difficult to be recognized
+
 Image of SHEILL with low standard deviation, will be difficult to be recognized
+
 Number of imagenes : 114
+
 Number of  labels : 114
+
 Number of   licenses : 114
+
 
 1000051  Hit with Otsu's thresholding of cv2 and THRESH_BINARY_INV
 
