@@ -338,3 +338,5 @@ https://towardsdatascience.com/the-practical-guide-for-object-detection-with-yol
 
 https://github.com/ultralytics/yolov5/issues/2293
 
+https://towardsdatascience.com/extract-text-from-memes-with-python-opencv-tesseract-ocr-63c2ccd72b69
+
