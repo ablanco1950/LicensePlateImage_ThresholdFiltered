@@ -712,6 +712,52 @@ for i in range (len(images)):
                    print(text + "  Hit con Stable y THRESH_TOZERO_INV" )
                    TotHits=TotHits+1
                    SwEncontrado=1              
+         #https://towardsdatascience.com/extract-text-from-memes-with-python-opencv-tesseract-ocr-63c2ccd72b69           
+        if SwEncontrado==0:
+                ret, gray1 = cv2.threshold(gray, 240, 255, 1)
+                
+                text = pytesseract.image_to_string(gray1, lang='eng',  \
+                    config='--psm 13 --oem 3 -c tessedit_char_whitelist= ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890 ')
+               
+                text = ''.join(char for char in text if char.isalnum())
+                
+                if text==Licenses[i]:
+                        print(text + "  Hit with MEMES" )
+                        TotHits=TotHits+1
+                        SwEncontrado=1 
+         #https://en.wikipedia.org/wiki/Kernel_(image_processing)
+         #https://stackoverflow.com/questions/4993082/how-can-i-sharpen-an-image-in-opencv, respuesta 66
+        if SwEncontrado==0:
+             for z in range(4,8):
+                kernel = np.array([[0,-1,0], [-1,z,-1], [0,-1,0]])
+                gray1 = cv2.filter2D(gray, -1, kernel)
+                #ret, gray1 = cv2.threshold(gray, 240, 255, 1)
+                
+                text = pytesseract.image_to_string(gray1, lang='eng',  \
+                    config='--psm 13 --oem 3 -c tessedit_char_whitelist= ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890 ')
+               
+                text = ''.join(char for char in text if char.isalnum())
+                
+                if text==Licenses[i]:
+                        print(text + "  Hit with Sharpen filter" )
+                        TotHits=TotHits+1
+                        SwEncontrado=1 
+                        break
+                    
+        if SwEncontrado==0:
+           
+                gray1 = cv2.Canny(gray,200,255)    
+                #ret, gray1 = cv2.threshold(gray, 240, 255, 1)
+                gray1= 255 - gray1
+                text = pytesseract.image_to_string(gray1, lang='eng',  \
+                    config='--psm 13 --oem 3 -c tessedit_char_whitelist= ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890 ')
+               
+                text = ''.join(char for char in text if char.isalnum())
+                
+                if text==Licenses[i]:
+                        print(text + "  Hit with Canny filter" )
+                        TotHits=TotHits+1
+                        SwEncontrado=1 
         
         if SwEncontrado==0:
           
