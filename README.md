@@ -17,6 +17,8 @@ import re
 
 import os
 
+import skimage  (is scikit-image)
+
 
 It is convenient to have Spyder installed for the execution of the program and Anaconda for the installation of the aforementioned packages from the cmd.exe option
 
