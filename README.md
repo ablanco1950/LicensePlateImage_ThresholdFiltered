@@ -83,7 +83,7 @@ On 05/23/2022 a new version is introduced:
 =========================================
 GetNumberLicensePlateV1.py
 
-Which is intended by varying the threshold level in a loop above and below the experimental formula of the thresold, that the correct enrollment is obtained for the most part.
+Which is intended by varying the threshold level in a loop above and below the experimental formula of the thresold, that the correct number license plate will be got.
 
 For its execution, it needs that in the same directory of the program there is the Test2 directory that is attached and that contains the images and labels of the test.
 
